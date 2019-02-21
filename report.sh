@@ -16,6 +16,7 @@
 #       CREATED: 21/02/19 18:22
 #      REVISION:  ---
 #===============================================================================
+# TODO: tratar keywords con espacios!
 
 set -o nounset                              # Treat unset variables as an error
 
