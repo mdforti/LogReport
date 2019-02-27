@@ -16,8 +16,9 @@
 #       CREATED: 21/02/19 18:22
 #      REVISION:  ---
 #===============================================================================
-# TODO: tratar keywords con espacios!
-
+# TODO:
+# - tratar keywords con espacios!
+# - niveles de títulos: los días deben estar un nivel arriva de los subtítulos. 
 set -o nounset                              # Treat unset variables as an error
 
 KEYWORD=$1
@@ -32,7 +33,7 @@ do
     year=${date:0:4}
     month=${date:4:2}
     day=${date:6:2}
-    echo -e "\n## $day/$month/$year\n\n###$(sed 's/\#//g' match) " >> report_"$KEYWORD".md 
+    echo -e "\n#$day/$month/$year\n\n###$(sed 's/\#//g' match) " >> report_"$KEYWORD".md 
   fi
 done
 
