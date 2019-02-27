@@ -16,20 +16,14 @@
 #       CREATED: 21/02/19 18:22
 #      REVISION:  ---
 #===============================================================================
-<<<<<<< HEAD
 # TODO: tratar keywords con espacios!
 
-=======
-# TODO:
-# - tratar keywords con espacios!
-# - niveles de títulos: los días deben estar un nivel arriva de los subtítulos. 
->>>>>>> master
 set -o nounset                              # Treat unset variables as an error
 
 KEYWORD=$1
 echo "" > report_"$KEYWORD".md
 
-for file in *.md */*.md
+for file in */*.md
 do
   ismatch=$(awk -v keyword=$KEYWORD  'BEGIN{RS="##"};{if(match($0, keyword)){print $0}}' $file | tee match | wc -l )
   if [ $ismatch -gt 0 ]
@@ -38,7 +32,8 @@ do
     year=${date:0:4}
     month=${date:4:2}
     day=${date:6:2}
-    echo -e "\n#$day/$month/$year\n\n###$(sed 's/\#//g' match) " >> report_"$KEYWORD".md 
+    printf "\n## $day/$month/$year\n\n###" >> report_"$KEYWORD".md 
+    sed 's/\#//g' match >> report_"$KEYWORD".md 
   fi
 done
 
