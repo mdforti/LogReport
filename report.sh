@@ -30,7 +30,9 @@ printf -- '\n---\n' >> report_"$KEYWORD".md
 
 for file in */*.md
 do
-  ismatch=$(awk -v keyword=$KEYWORD  'BEGIN{RS="## "};{if(match($0, keyword)){print $0}}' $file | tee match | wc -l )
+  ismatch=$(awk -v keyword=$KEYWORD -v RS='(^|\n)## ' -v IGNORECASE=1 \
+            '{if(match($0, keyword)){print $0}}' $file \
+	    | tee match | wc -l )
   if [ $ismatch -gt 0 ]
   then
     date=$(dirname $file)
