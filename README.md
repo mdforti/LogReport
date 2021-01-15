@@ -25,18 +25,21 @@ for example:
 ```{shell}
 (ins)$ tree 2020 | head
 2020
-├── 20200204
 ├── 20200212
 │   ├── TODAY.md
-│   └── TODAY.pdf
 ├── 20200313
 │   ├── TODAY.md
-│   └── TODAY.pdf
 ├── 20200316
 │   ├── TODAY.md
 ```
 
-I do it automatically whith a shell function, which I will set in a different repo. for example:
+I do it automatically whith a shell function which is included in update_bashrc_or_profile.sh. 
+simply append this file to your .bashrc or just source it in your init files. 
+
+
+
+## Dependencies:
+bash, awk, common shell commands: find, date.
 
 
 
@@ -46,3 +49,4 @@ I do it automatically whith a shell function, which I will set in a different re
 
 - keep it shell based, no python. 
 
+- translate 
