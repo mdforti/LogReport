@@ -17,6 +17,29 @@ blocks of text between # or ## where the keyword is mentioned.
 
 The script is pretty simple, suggestions are wellcome. 
 
+## detail on the log structure
+
+The script suposes a structure of your logs where you have a different directory for each day of log.
+
+for example:
+```{shell}
+(ins)$ tree 2020 | head
+2020
+├── 20200204
+├── 20200212
+│   ├── TODAY.md
+│   └── TODAY.pdf
+├── 20200313
+│   ├── TODAY.md
+│   └── TODAY.pdf
+├── 20200316
+│   ├── TODAY.md
+```
+
+I do it automatically whith a shell function, which I will set in a different repo. for example:
+
+
+
 ## Possible improvements:
 
 - change simple bash / awk wildcard filtering by real regex 
