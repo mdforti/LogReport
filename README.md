@@ -37,6 +37,7 @@ I do it automatically whith a shell function which is included in update_bashrc_
 simply append this file to your .bashrc or just source it in your init files. 
 
 
+Also, the daytlte folder is included with a template to use. just update the directory where you will install it.
 
 ## Dependencies:
 bash, awk, common shell commands: find, date.

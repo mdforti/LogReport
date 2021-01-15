@@ -26,8 +26,10 @@ HOY=$(date +%d/%m/%Y)
 export HOY
 ## set your log root directory:
 ROOTLOG=/$HOME/Bitacoras/$(date +%Y)
+##################################################
 ## set up a template for your logs
-TEMPLATES=$ROOTLOG/daytlte/TODAY.md 
+TEMPLATES=/PATH_TO_THE_TEMPLATE/daytlte/TODAY.md 
+##################################################
 # set up the file for today
 TODAY_LOG=$ROOTLOG/$TODAY/TODAY.md
 export TODAY
